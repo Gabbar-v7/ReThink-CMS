@@ -1,7 +1,5 @@
-export default function Index() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
+import { redirect, type LoaderFunctionArgs } from "react-router";
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  return redirect("/authenticate");
 }
